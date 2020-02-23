@@ -1,20 +1,20 @@
 @font-face {
     font-family: "Lato";
-    src: url("assets/Lato-Regular.ttf");
+    src: url(./assets/fonts/Lato-Regular.ttf);
 }
 @font-face {
     font-family: "Lato Light";
-    src: url("assets/Lato-Light.ttf");
+    src: url(./assets/fonts/Lato-Light.ttf);
     font-weight: lighter;
 }
 @font-face {
-    font-family: "Lato Medium";
-    src: url("assets/Lato-Medium.ttf");
+    font-family: "Lato Thin";
+    src: url(./assets/fonts/Lato-Thin.ttf);
     font-style: normal;
 }
 @font-face {
     font-family: "Lato Bold";
-    src: url("assets/Lato-Bold.ttf");
+    src: url(./assets/fonts/Lato-Bold.ttf);
     font-weight: bold;
 }
 
@@ -27,144 +27,176 @@
     font-family: Lato, sans-serif;
 }
 
-.wrapper{
-    max-width: 1020px;
+.wrapper {
+    width: 1020px;
     margin: 0 auto;
+    /* border: #f06c64 solid 5px; */
 }
 
 .header {
     height: 95px;
+    border-bottom: solid 5px #323746;
     background-color: #2d303a;
-    border-bottom: 5px solid #323746; 
 }
 
-.menu {
+.header-panel {
+    height: 95px;   
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 30px 0 0 42px;
+    align-content: center;
+    align-items: center;
 }
 
-.logo {
-    color: #fff;
-    text-transform: uppercase;
+.header-panel .logo {
+    padding-left: 38px;
 }
 
 .logo h1 {
-    font-weight: 400;
+    padding-bottom: 6px;
     font-size: 25px;
+    font-weight: 400;
+    font-family: Lato, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .logo span {
-    color: #d2625c;
-}
-
-.nav {
-    height: 100%;
-    padding: 8px 4px;
+    color: #e66962;
 }
 
 .nav ul{
+    width: 448px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
     display: flex;
+    justify-content: space-evenly;
 }
 
-.nav li {
-    padding-right: 30px;
+.nav li{
+    display: inline-block;
 }
 
-.nav a {
-    font-size: 12px;
-    color: #fff;
+.nav li a {
+    color: #a3a3a6;
     text-transform: uppercase;
+    font-size: 12px;
 }
 
-.nav a:hover {
-    color: #d2625c;
+.nav li a:hover {
+    color: #f06c64;
 }
 
 /* SLIDER */
 
 .slider {
-    background-color: #f06c64;
-    border-bottom: 7px solid #ea676b;
     height: 601px;
+    width: 100%;
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
 }
 
-.phones {
+.slider-panel {
+    height: 601px;
     display: flex;
+    padding-bottom: 8px;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
 }
 
-.click {
-    display: block;
+.phone{
+    padding-left: 2px;
+}
+
+.phone-horizontal{
+    padding-left: 18px;
+}
+
+.btn:hover {
     cursor: pointer;
-    padding: 0 40px;
+    opacity: 0.7;
 }
 
-.clock:hover {
-    color: black;
+.slider-panel:first-child{
+    padding-left: 40px;
 }
 
-.vertical-phone {
-    padding-left: 10px;
-    padding-right: 10px;
+.slider-panel:last-child{
+    padding-right: 40px;
 }
 
-.horizontal-phone{
-    padding-left: 50px;
-}
-/* OUR SERVICES */
 
-.our-services {
+/* OUR-SERVICES */
+
+.our-services{
+    height: 501px;
     background-color: #f2f2f2;
-    border-bottom: 7px solid #fff;
-    height: 500px;
+    border-bottom: solid 6px #fff;
     color: #666d89;
 }
 
-.article {
-    /* padding: 41px 71px; */
-    font-family: Lato, sans-serif;
+.services-panel {
+    position: relative;
+    top: 59px;
+    left: 41px;
 }
 
-.article h2 {
+.services-panel h2{
+    text-transform: capitalize;
     font-size: 30px;
+    display: inline-block;
+    height: 50px;
+    width: 940px;
+}
+
+.services-panel p{
+    padding-top: 2px;
+    max-width: 980px;
+    font-size: 18px;
     font-weight: 400;
-    padding-left: 45px;
-    padding-top: 60px;
+    word-spacing: -0.2px;
+    letter-spacing: -0.2px;
+    line-height: 1.8;
 }
 
-.article p {
-    line-height: 1.8em;
-    font-size: 18px;
-    padding: 17px 0 55px 45px;
-}
-
-.container {
+.article{
+    width: 940px;
+    height: 244px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: row;
+    position: relative;
+    top: 46px;
+    left: 1px;
 }
 
-.section {
+.section{
     width: 300px;
+    height: 90px;
     display: flex;
-    flex-direction: row;
-    padding-left: 43px;
 }
 
-.section .image {
-    padding: 0 2px;
-}
-
-.description h3 {
+.section h3 {
     font-size: 18px;
-    text-align: center;
-    padding: 5px 0px;
+    text-transform: capitalize;
 }
 
-.description p {
+.section p {
     font-size: 12px;
-    padding: 0px 0 0 15px;
+}
+
+.section .info {
+    position: relative;
+    bottom: 5px;
+    left: 20px;
+}
+
+.section .info p{
+    width: 220px;
+    position: relative;
+    top: 5px;
+    line-height: 1.75;
 }

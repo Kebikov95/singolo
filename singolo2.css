@@ -50,7 +50,7 @@
     color: #767e9e;
     font-size: 18px;
     font-family: Lato-Light;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.012em;
 }
 
 .portfolio-buttons {
@@ -117,12 +117,13 @@
 }
 
 .about p {
+    width: 935px;
     color: #666d89;
     font-family: Lato-Light;
     font-size: 18px;
     margin: 15px 0;
     line-height: 1.8;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.0053em;
 }
 
 .authors {
@@ -142,7 +143,7 @@
     max-width: 300px;
     font-family: Lato-Regular;
     font-size: 12px;
-    letter-spacing: 0.0001em;
+    letter-spacing: -0.012em;
 }
 
 .sites {

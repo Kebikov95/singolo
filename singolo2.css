@@ -157,4 +157,5 @@
 .sites img {
     margin: 0;
     padding: 0 4px;
+    cursor: pointer;
 }

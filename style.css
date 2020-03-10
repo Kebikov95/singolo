@@ -33,9 +33,9 @@
 
 /* Header */
 
-.header {
-    height: 95px;
-    border-bottom: solid 5px #323746;
+.header .wrapper {
+    height: 95px;   
+    border-bottom: solid 6px #323746;
     background-color: #2d303a;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .logo h1 {
-    padding-bottom: 6px;
+    padding-bottom: 7px;
     font-family: Lato-Regular;
     font-size: 25px;
     font-weight: 600;
@@ -66,10 +66,9 @@
 }
 
 .nav ul{
-    width: 448px;
+    width: 450px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 2px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -79,7 +78,7 @@
 }
 
 .nav li a {
-    font-family: Lato-Black;
+    font-family: Lato-Regular;
     color: #fff;
     text-transform: uppercase;
     font-size: 12px;
@@ -91,15 +90,14 @@
 
 /* SLIDER */
 
-.slider {
-    height: 601px;
-    width: 100%;
+.slider .wrapper {
+    height: 600px;
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
 }
 
 .slider-panel {
-    height: 601px;
+    height: 600px;
     display: flex;
     padding-bottom: 8px;
     flex-direction: row;
@@ -107,11 +105,11 @@
     align-items: center;
 }
 
-.phone{
+.phone {
     padding-left: 2px;
 }
 
-.phone-horizontal{
+.phone-horizontal {
     padding-left: 18px;
 }
 
@@ -120,7 +118,7 @@
     opacity: 0.7;
 }
 
-.slider-panel:first-child{
+.slider-panel:first-child {
     padding-left: 40px;
 }
 
@@ -128,11 +126,10 @@
     padding-right: 40px;
 }
 
-
 /* OUR-SERVICES */
 
-.our-services{
-    height: 501px;
+.our-services .wrapper {
+    height: 500px;
     background-color: #f2f2f2;
     border-bottom: solid 6px #fff;
     color: #666d89;
@@ -149,20 +146,20 @@
     font-size: 30px;
     display: inline-block;
     height: 50px;
-    width: 940px;
 }
 
-.services-panel p{
+.services-panel p {
+    width: 940px;
+    text-align: justify;
     padding-top: 2px;
     max-width: 980px;
     font-size: 18px;
     font-weight: 400;
-    word-spacing: -0.2px;
-    letter-spacing: -0.2px;
     line-height: 1.8;
+    letter-spacing: -0.36px;
 }
 
-.article{
+.article {
     width: 940px;
     height: 244px;
     display: flex;
@@ -171,10 +168,9 @@
     flex-wrap: wrap;
     position: relative;
     top: 46px;
-    left: 1px;
 }
 
-.section{
+.section {
     width: 300px;
     height: 90px;
     display: flex;
@@ -195,17 +191,19 @@
     left: 20px;
 }
 
-.section .info p{
+.section .info p {
+    word-wrap: break-word;
+    text-align: justify;
+    letter-spacing: -0.2px;
     width: 220px;
     position: relative;
     top: 5px;
-    line-height: 1.75;
+    line-height: 1.88;
 }
-
 
 /* Portfolio */
 
-.portfolio {
+.portfolio .wrapper {
     height: 870px;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
@@ -231,7 +229,7 @@
 }
 
 .portfolio-buttons {
-    margin: 16px 0;
+    margin: 15px 0 17px 0;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -280,8 +278,8 @@
 
 /* About us */
 
-.about {
-    height: 735px;;
+.about .wrapper {
+    height: 734px;;
     background-color: #f2f2f2;
     border-bottom: solid 6px #fff;
     color: #666d89;
@@ -299,12 +297,13 @@
     font-family: Lato-Light;
     font-size: 18px;
     margin: 15px 0;
-    line-height: 1.8;
-    letter-spacing: -0.0053em;
+    line-height: 1.7;
+    letter-spacing: -0.013em;
+    text-align: justify;
 }
 
 .authors {
-    margin-top: 42px;
+    margin-top: 45px;
     display: flex;
     justify-content: space-between;
 }
@@ -320,7 +319,8 @@
     max-width: 300px;
     font-family: Lato-Regular;
     font-size: 12px;
-    letter-spacing: -0.012em;
+    text-align: justify;
+    letter-spacing: -2;
 }
 
 .sites {
@@ -340,8 +340,8 @@
 
 /* Contact */
 
-.contact {
-    height: 655px;
+.contact .wrapper {
+    height: 654px;
     background-color: #f06c64;
     border-bottom: solid #ea676b 6px;
 }
@@ -353,13 +353,17 @@
 }
 
 .contact p {
+    width: 930px;
+    height: 55px;
     font-family: Lato-Light;
+    text-align: justify;
     font-size: 18px;
-    letter-spacing: -0.32px;
-    line-height: 31px;
+    letter-spacing: -0.19px;
+    line-height: 1.6;
     color: #f0d8d9;
     margin-top: 18px;
     margin-bottom: 45px;
+    word-wrap: break-word;
 }
 
 .contact-with-us {
@@ -391,6 +395,10 @@ form input::placeholder{
     font-size: 12px;
 }
 
+form input:focus{
+    background-color: rgba(250, 120, 120, 0.35);
+}
+
 form textarea {
     width: 620px;
     height: 203px;
@@ -407,30 +415,22 @@ form textarea::placeholder{
     font-size: 12px;
 }
 
+form textarea:focus{
+    background-color: rgba(250, 120, 120, 0.35);
+}
+
 form input[type="submit"] {
     color: #f48c8f;
     width: 100px;
     height: 38px;
-    padding-right: 10px;
+    padding-right: 14px;
     text-align: center;
     border: solid 2px pink;
     cursor: pointer;
 }
 
-input:invalid {
-    border: solid 1px red;
-}
-
-input:valid {
-    border: solid 1px green;
-}
-
-textarea:invalid {
-    border: solid 1px red;
-}
-
-textarea:valid {
-    border: solid 1px green;
+form input[type="submit"]:hover {
+    background-color: #2d303a;
 }
 
 .contact-info {
@@ -447,20 +447,21 @@ textarea:valid {
 
 .contact-info p {
     word-wrap: break-word;
+    text-align: justify;
     width: 309px;
     font-family: Lato-Regular;
     font-size: 12px;
     line-height: 22px;
-    letter-spacing: -0.01px;
+    letter-spacing: -0.02px;
     color: #f0d8d9;
     position: relative;
-    bottom: 11px;
+    bottom: 12px;
     right: 2px;
 }
 
 .contact-info ul {
     position: relative;
-    bottom: 41px;
+    bottom: 8px;
 }
 
 .contact-info li {
@@ -475,22 +476,32 @@ textarea:valid {
     text-transform: lowercase;
 }
 
-.contact-info li::before{
+li.address a::before {
     content: "";
     width: 20px;
     height: 20px;
-    background: url('/assets/img/location_before.png') no-repeat top left;
+    background: url("assets/img/location.png") no-repeat;
     display: inline-block;
     position: relative;
     top: 10px;
 }
 
-.contact-info li:nth-child(2)::before{
-    background: url('/assets/img/phone_before.png') no-repeat;
+li.telephone a::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("assets/img/phones.png") no-repeat;
+    display: inline-block;
+    position: relative;
+    top: 10px;
 }
 
-.contact-info li:last-child::before{
-    background: url('/assets/img/mail_before.png') no-repeat;
+li.email a::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("assets/img/mail.png") no-repeat;
+    display: inline-block;
     position: relative;
     top: 12px;
 }
@@ -501,7 +512,7 @@ textarea:valid {
 
 /* Footer */
 
-.footer {
+.footer .wrapper {
     height: 76px;
     background-color: #2d303a;
 }

@@ -189,6 +189,8 @@
     position: relative;
     bottom: 5px;
     left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .section .info p {
@@ -312,6 +314,9 @@
     margin-top: 13px;
     font-family: Lato-Black;
     font-size: 18px;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .authors p {
@@ -321,6 +326,10 @@
     font-size: 12px;
     text-align: justify;
     letter-spacing: -2;
+    width: 300px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .sites {
@@ -530,10 +539,6 @@ li.email a::before {
     font-family: Lato-Regular;
     font-size: 12px;
     color: #575d74;
-}
-
-.footer-block p:before {
-    content: "© ";
 }
 
 .footer-block .sites {

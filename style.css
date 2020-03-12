@@ -532,10 +532,6 @@ li.email a::before {
     color: #575d74;
 }
 
-.footer-block p:before {
-    content: "© ";
-}
-
 .footer-block .sites {
     display: flex;
     justify-content: flex-start;

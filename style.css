@@ -90,6 +90,10 @@
     color: #f06c64;
 }
 
+.nav > ul > li > a.active {
+    color: #f06c64;
+}
+
 /* SLIDER */
 
 .slider .wrapper {

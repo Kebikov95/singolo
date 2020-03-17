@@ -284,12 +284,23 @@
     margin-right: 0;
 }
 
+.portfolio-buttons .active {
+    color: #fff;
+    border: solid 2px #fff;
+}
+
+.portfolio-buttons div:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
 .photos {
     height: 602px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
 }
+
 
 .photos img {
     max-width: 220px;
@@ -298,16 +309,15 @@
     margin-bottom: 20px;
 }
 
+.photos .active {
+    border: solid 5px #F06C64;
+}
+
 .photos img:nth-child(1), .photos img:nth-child(5),
 .photos img:nth-child(9) {
     margin-left: 0;
 }
 
-
-.portfolio-buttons div:hover {
-    color: #fff;
-    border-color: #fff;
-}
 
 /* About us */
 

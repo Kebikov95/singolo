@@ -109,14 +109,39 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.slider-panel-second {
+    background-image: url('/assets/img/Slide-2.png');
 }
 
 .phone {
     padding-left: 2px;
 }
 
-.phone-horizontal {
+.phone:nth-child(2) {
     padding-left: 18px;
+}
+
+.off-vertical {
+    position: absolute;
+    top: 213px;
+    left: 296px;
+    width: 190px;
+    height: 333px;
+    background-color: black;
+    visibility: hidden;
+}
+
+.off-horizontal {
+    position: absolute;
+    top: 283px;
+    left: 645px;
+    width: 333px;
+    height: 190px;
+    background-color: black;
+    visibility: hidden;
 }
 
 .btn:hover {

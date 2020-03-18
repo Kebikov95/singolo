@@ -1,12 +1,17 @@
 /* Constants */
 const MENU = document.getElementById('menu');
+
 const SLIDER = document.getElementById('slider');
 const BUTTON_LEFT= document.getElementById('btn-left');
 const BUTTON_RIGHT= document.getElementById('btn-right');
 const PHONE_V = document.getElementById('phone-vertical');
 const PHONE_H = document.getElementById('phone-horizontal');
+
 const PORTFOLIO_MENU = document.getElementById('portfolio-btn');
 const PHOTOS = document.getElementById("photo");
+
+const SUBMIT = document.getElementById('submit');
+const CLOSE_BUTTON = document.getElementById('close-btn');
 
 
 /* Header */
@@ -136,3 +141,32 @@ PHOTOS.addEventListener('click', (event) => {
         event.target.classList.add('active');
     }
 })
+
+/* Contact */
+SUBMIT.addEventListener('click', (event) => {
+     const subject = document.getElementById('subject').value.toString();
+     const description = document.getElementById('desc').value.toString();
+     document.getElementById('mes-query').innerHTML = 'The letter was sent';
+
+     if(subject){
+        document.getElementById('mes-about').innerHTML = subject;
+     }
+     else {
+        document.getElementById('mes-about').innerHTML = 'without subject';
+     }
+
+     if(description){
+        document.getElementById('mes-desc').innerHTML = description;
+     }
+     else {
+        document.getElementById('mes-desc').innerHTML = 'without description';
+     }
+
+     document.getElementById('message-block').classList.remove('hidden');
+})
+
+CLOSE_BUTTON.addEventListener('click', () => {
+     document.getElementById('subject').value = '';
+     document.getElementById('desc').value = '';
+     document.getElementById('message-block').classList.add('hidden');
+});

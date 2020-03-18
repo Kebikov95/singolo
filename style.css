@@ -113,7 +113,7 @@
 }
 
 .slider-panel-second {
-    background-image: url('/assets/img/Slide-2.png');
+    background-image: url('./assets/img/Slide-2.png');
 }
 
 .phone {
@@ -481,6 +481,50 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     background-color: #2d303a;
+}
+
+#message-block {
+    font-family: Lato, sans-serif;
+    position: relative;
+    bottom: 300px;
+    left: 20%;
+    width: 500px;
+    height: 220px;
+    background: rgba(0, 0, 0, .6);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#message p {
+    margin: 10px;
+    height: 15px;
+    width: 400px;
+    font-weight: bold;
+}
+
+#message > p > span {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#message > button {
+    margin-left: 10px;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0 , 0, .9);
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .contact-info {

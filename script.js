@@ -188,7 +188,6 @@ SUBMIT.addEventListener('click', (event) => {
 })
 
 CLOSE_BUTTON.addEventListener('click', () => {
-     document.getElementById('subject').value = '';
-     document.getElementById('desc').value = '';
+     document.getElementById('form').reset();
      document.getElementById('message-block').classList.add('hidden');
 });

@@ -1,7 +1,7 @@
 /* Constants */
 const MENU = document.getElementById('menu');
 
-const SLIDER = document.getElementById('slider');
+const SLIDER = document.getElementById('home');
 const BUTTON_LEFT= document.getElementById('btn-left');
 const BUTTON_RIGHT= document.getElementById('btn-right');
 const PHONE_V = document.getElementById('phone-vertical');
@@ -12,6 +12,28 @@ const PHOTOS = document.getElementById("photo");
 
 const SUBMIT = document.getElementById('submit');
 const CLOSE_BUTTON = document.getElementById('close-btn');
+
+/* Scroll menu on page */
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event){
+  const curPos = window.scrollY;
+  const divs = document.querySelectorAll('div.wrapper');
+  const links = document.querySelectorAll('#menu a');
+
+  divs.forEach( el => {
+    if(el.offsetTop <= curPos 
+        &&
+      (el.offsetTop + el.offsetHeight) > curPos){
+          links.forEach( a => {
+          a.classList.remove('active');
+          if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
+            a.classList.add('active');
+          }
+        });
+    }
+  });
+}
 
 
 /* Header */

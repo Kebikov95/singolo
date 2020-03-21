@@ -32,7 +32,19 @@
     padding: 60px 40px;
 }
 
+/*  Preview */
+.preview {
+    height: 95px;
+}
+
 /* Header */
+.header {
+    height: 95px;  
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
 
 .header .wrapper {
     height: 95px;   

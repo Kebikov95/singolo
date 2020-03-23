@@ -39,12 +39,14 @@
 
 /* Header */
 .header {
-    height: 95px;  
+    height: 95px;
+    width: 100%;  
     position: fixed;
     overflow: hidden;
     top: 0;
-    width: 100%;
-    margin: 0 auto;
+    left: 0;
+    text-align: center;
+    z-index: 999;
 }
 
 .header .wrapper {
@@ -122,7 +124,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    position: relative;
 }
 
 .slider-panel-second {
@@ -139,8 +141,8 @@
 
 .off-vertical {
     position: absolute;
-    top: 213px;
-    left: 296px;
+    top: 118px;
+    left: 131px;
     width: 190px;
     height: 333px;
     background-color: black;
@@ -149,8 +151,8 @@
 
 .off-horizontal {
     position: absolute;
-    top: 283px;
-    left: 645px;
+    top: 188px;
+    left: 480px;
     width: 333px;
     height: 190px;
     background-color: black;

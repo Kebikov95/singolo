@@ -22,7 +22,7 @@ function onScroll(event){
   const links = document.querySelectorAll('#menu a');
 
   divs.forEach( el => {
-    if(el.offsetTop <= curPos 
+    if(el.offsetTop - 80 <= curPos 
         &&
       (el.offsetTop + el.offsetHeight) > curPos){
           links.forEach( a => {

@@ -18,7 +18,7 @@ document.addEventListener('scroll', onScroll);
 
 function onScroll(event){
   const curPos = window.scrollY;
-  const divs = document.querySelectorAll('div.wrapper');
+  const divs = document.querySelectorAll('.wrapper > div');
   const links = document.querySelectorAll('#menu a');
 
   divs.forEach( el => {

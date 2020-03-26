@@ -29,6 +29,7 @@
 .wrapper {
     width: 1020px;
     margin: 0 auto;
+    position: relative;
 }
 .container {
     padding: 60px 40px;
@@ -46,7 +47,7 @@
 .header {
     width: 1020px;
 }
-.header .wrapper {
+.header {
     height: 95px;   
     border-bottom: solid 6px #323746;
     background-color: #2d303a;
@@ -101,7 +102,7 @@
 
 
 /* SLIDER */
-.slider .wrapper {
+.slider {
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
 }
@@ -112,7 +113,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 .slider-panel-second {
     background-position: center;
@@ -120,27 +120,30 @@
 }
 .phone {
     padding-left: 2px;
+    position: relative;
 }
 .phone:nth-child(2) {
     padding-left: 18px;
 }
-.off-vertical {
+.off {
     position: absolute;
-    top: 118px;
+    background-color: black;
+    visibility: hidden;
+    z-index: 2;
+}
+.off-vertical {
+    
+    top: 213px;
     left: 131px;
     width: 190px;
     height: 333px;
-    background-color: black;
-    visibility: hidden;
+
 }
 .off-horizontal {
-    position: absolute;
-    top: 188px;
+    top: 282px;
     left: 480px;
     width: 333px;
     height: 190px;
-    background-color: black;
-    visibility: hidden;
 }
 .btn:hover {
     cursor: pointer;
@@ -155,7 +158,7 @@
 
 
 /* OUR-SERVICES */
-.our-services .wrapper {
+.our-services {
     height: 500px;
     background-color: #f2f2f2;
     border-bottom: solid 6px #fff;
@@ -224,7 +227,7 @@
 
 
 /* PORTFOLIO */
-.portfolio .wrapper {
+.portfolio {
     height: 870px;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
@@ -296,7 +299,7 @@
 
 
 /* ABOUT US */
-.about .wrapper {
+.about {
     height: 734px;;
     background-color: #f2f2f2;
     border-bottom: solid 6px #fff;
@@ -356,7 +359,7 @@
 
 
 /* CONTACT */
-.contact .wrapper {
+.contact {
     height: 654px;
     background-color: #f06c64;
     border-bottom: solid #ea676b 6px;
@@ -544,7 +547,7 @@ li.email a::before {
 
 
 /* FOOTER */
-.footer .wrapper {
+.footer {
     height: 76px;
     background-color: #2d303a;
 }
@@ -582,38 +585,42 @@ li.email a::before {
     .preview {
         display: block;
     }
-    .header .wrapper{
+    .header {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        margin: auto;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1020px) {
 
+    /* Main elements */
+    .wrapper {
+        display: inline;
+        margin: 0;
+    }
+
     /* Header */
     .preview {
-        display: none;
+        display: block;
     }
     .header {
-        height: auto;
         width: 100vw;
         position: relative;
     }
-    .header .wrapper{
+    .header {
         width: 100vw;
         position: absolute;
         top: 0;
         left: 0;
         display: block;
+        margin-bottom: 95px;
     }
     
     /* Slider */
     .slider {
-        padding-top: 95px;
-    }
-    .slider .wrapper {
         width: 100vw;
     }
     .phone-vertical img {
@@ -626,27 +633,21 @@ li.email a::before {
     }
     .off-vertical{
         top: 22vh;
-        left: 15.1vw;
-        width: 17.2vw;
-        height: 30.7vh;
+        left: 15vw;
+        width: 17.4vw;
+        height: 19.9vh;
     }
     .off-horizontal{
-        top: 28.5vh;
+        top: 26.25vh;
         left: 47.9vw;
-        width: 30.5vh;
-        height: 17.3vw;
+        width: 30.3vw;
+        height: 11vh;
     }
 
     /* Our services */
-    .our-services .wrapper {
+    .our-services {
         width: 100vw;
-        height: 95vh;
-    }
-    .services-panel {
-        top: 7vh;
-        left: 5vw;
-        height: auto;
-        width: 100vw;
+        height: 650px;
     }
     .services-panel p {
         width: 89vw;
@@ -666,19 +667,10 @@ li.email a::before {
         height: 1100px;
         background-color: #2d303a;
     }
-    .portfolio .wrapper {
-        height: 100vh;
-        width: 100vw;
-        background-color: #2d303a;
-    }
-    .portfolio .container {
-        height: 100vh;
-        background-color: #2d303a;
-    }
     .portfolio p {
         width: 83vw;
-    }.photos {
-        height: 80vh;
+    }
+    .photos {
         width: 94vw;
         flex-basis: 100%;
         background-color: #2d303a;
@@ -689,7 +681,7 @@ li.email a::before {
     }
     
     /* About us */
-    .about .wrapper {
+    .about {
         width: 100vw;
         height: auto;
     }
@@ -715,17 +707,17 @@ li.email a::before {
     }
 
     /* Contact */
-    .contact .wrapper {
+    .contact {
         width: 100vw;
     }
     .contact p {
-        width: 80vw;
+        width: 90vw;
     }
     .contact input {
-        width: 45vw;
+        width: 55vw;
     }
     .contact textarea {
-        width: 45vw;
+        width: 55vw;
     }
     .contact .container {
         width: 80vw;
@@ -745,7 +737,7 @@ li.email a::before {
     }
 
     /* Footer */
-    .footer .wrapper {
+    .footer {
         width: 100vw;
     }
 }

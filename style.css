@@ -657,7 +657,7 @@ li.email a::before {
         flex-basis: 100%;
     }
     .services-panel > .article > .section {
-        margin-bottom: 7vh;
+        margin-bottom: 5vh;
         flex: 1 0 50%
     }
 
@@ -711,7 +711,7 @@ li.email a::before {
         margin: 0 0.5vw;
     }
     .person .sites {
-        margin-top: 5vh;
+        margin-top: 7vh;
     }
 
     /* Contact */

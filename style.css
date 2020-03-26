@@ -643,7 +643,7 @@ li.email a::before {
         height: 95vh;
     }
     .services-panel {
-        top: 10vh;
+        top: 7vh;
         left: 5vw;
         height: auto;
         width: 100vw;
@@ -657,7 +657,7 @@ li.email a::before {
         flex-basis: 100%;
     }
     .services-panel > .article > .section {
-        margin-bottom: 5vh;
+        margin-bottom: 4vh;
         flex: 1 0 50%
     }
 

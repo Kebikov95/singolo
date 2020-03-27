@@ -581,6 +581,9 @@ li.email a::before {
 
 @media only screen and (min-width: 1020px) {
 
+    body {
+        background-color: #2d303a;
+    }
     /* Header */
     .preview {
         display: block;
@@ -594,7 +597,7 @@ li.email a::before {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1020px) {
+@media (min-width: 768px) and (max-width: 1019px) {
 
     /* Main elements */
     .wrapper {
@@ -609,6 +612,7 @@ li.email a::before {
     .header {
         width: 100vw;
         position: relative;
+        overflow: hidden;
     }
     .header {
         width: 100vw;
@@ -621,6 +625,7 @@ li.email a::before {
     
     /* Slider */
     .slider {
+        overflow: hidden;
         width: 100vw;
     }
     .phone-vertical img {
@@ -648,8 +653,12 @@ li.email a::before {
     .our-services {
         width: 100vw;
         height: 650px;
+        overflow: hidden;
     }
-    .services-panel p {
+    .services-panel {
+        width: 100%;
+    }
+    .services-panel > p {
         width: 89vw;
     }
     .article {
@@ -666,6 +675,7 @@ li.email a::before {
     .portfolio {
         height: 1100px;
         background-color: #2d303a;
+        overflow: hidden;
     }
     .portfolio p {
         width: 83vw;
@@ -684,6 +694,7 @@ li.email a::before {
     .about {
         width: 100vw;
         height: auto;
+        overflow: hidden;
     }
     .about .container > p {
         width: 90vw;
@@ -709,6 +720,7 @@ li.email a::before {
     /* Contact */
     .contact {
         width: 100vw;
+        overflow: hidden;
     }
     .contact p {
         width: 90vw;
@@ -739,5 +751,6 @@ li.email a::before {
     /* Footer */
     .footer {
         width: 100vw;
+        overflow: hidden;
     }
 }

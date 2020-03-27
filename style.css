@@ -43,15 +43,12 @@ body {
 /*  PREVIEW */
 .preview {
     height: 95px;
-    display: none;
 }
 
 
 /* HEADER */
 .header {
     width: 1020px;
-}
-.header {
     height: 95px;   
     border-bottom: solid 6px #323746;
     background-color: #2d303a;
@@ -119,8 +116,10 @@ body {
     align-items: center;
 }
 .slider-panel-second {
-    background-position: center;
     background-image: url('./assets/img/Slide-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .phone {
     padding-left: 2px;
@@ -607,21 +606,13 @@ li.email a::before {
     }
 
     /* Header */
-    .preview {
-        display: none;
-    }
     .header {
         width: 100vw;
-        position: relative;
-        overflow: hidden;
-    }
-    .header {
-        width: 100vw;
+        height: 95px;
         position: absolute;
         top: 0;
         left: 0;
         display: block;
-        margin-bottom: 95px;
     }
     
     /* Slider */

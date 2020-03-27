@@ -26,6 +26,10 @@
     font-family: Lato-Regular, sans-serif;
 }
 
+body {
+    background-color: #2d303a;
+}
+
 .wrapper {
     width: 1020px;
     margin: 0 auto;
@@ -581,9 +585,6 @@ li.email a::before {
 
 @media only screen and (min-width: 1020px) {
 
-    body {
-        background-color: #2d303a;
-    }
     /* Header */
     .preview {
         display: block;

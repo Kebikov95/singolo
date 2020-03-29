@@ -865,7 +865,8 @@ li.email a::before {
 
     /* Slider */
     .slider {
-        height: 220px;
+        height: auto;
+        min-height: 210px;
     }
     .slider .slider-panel {
         height: auto;
@@ -874,25 +875,27 @@ li.email a::before {
         right: 10px;
     }
     .slider .btn-left {
-        position: relative;
-        right: 20px;
+        position: absolute;
+        top: 18vw;
+        left: 20px;
     }
     .slider .btn-right {
-        position: relative;
-        left: 10px;
+        position: absolute;
+        top: 18vw;
+        right: 10px;
     }
     .phone {
         margin: 0 10px;
     }
     .off-vertical{
         top: 5.9vw;
-        left: 19.3vw;
-        width: 17.7vw;
+        left: 15.3vw;
+        width: 17.2vw;
         height: 31.7vw;
     }
     .off-horizontal{
-        top: 12.5vw;
-        left: 51.3vw;
+        top: 12.3vw;
+        left: 48.1vw;
         width: 30.5vw;
         height: 17.2vw;
     }

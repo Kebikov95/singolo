@@ -40,7 +40,7 @@ function onScroll(event){
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('li > a').forEach(el => { el.classList.remove('active') });
     event.target.classList.add('active');
-
+    getHiddenMenu();
 })
 
 
@@ -202,28 +202,20 @@ const BG_OPACITY = document.querySelector('.black-opacity');
 const LOGO = document.querySelector('.header-panel .logo');
 const HEADER_MENU = document.getElementById('header-menu');
 
-const getHiddenMenu = SM_MENU.addEventListener('click', () => {
-    if(HEADER_MENU.classList.contains('vertical-menu')){
+function getHiddenMenu() {
+    let screenWidth = screen.width;
+    if( HEADER_MENU.classList.contains('vertical-menu') && screenWidth < 768 ){
         LOGO.style.margin = '0 20vw';
         NAV.style.display = 'none';
         BG_OPACITY.style.display = 'none';
         HEADER_MENU.classList.remove('vertical-menu');
     }
-    else{
+    else {
         LOGO.style.margin = 0;
         NAV.style.display = 'block';
         BG_OPACITY.style.display = 'block';
         HEADER_MENU.classList.add('vertical-menu');
     }
-})
+}
 
-const getPreviousForm = MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('li > a').forEach(el => { el.classList.remove('active') });
-    event.target.classList.add('active');
-    if(HEADER_MENU.classList.contains('vertical-menu')){
-        BG_OPACITY.style.display = 'none';
-        NAV.style.display = 'none';
-        HEADER_MENU.classList.remove('vertical-menu');
-        LOGO.style.margin = '0 20vw';
-    }
-})
+SM_MENU.addEventListener('click', getHiddenMenu);

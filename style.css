@@ -605,6 +605,9 @@ li.email a::before {
         right: 0;
         margin: auto;
     }
+    .header .nav {
+        display: block;
+    }
 }
 
 
@@ -632,6 +635,9 @@ li.email a::before {
         left: 0;
         display: block;
     }
+    .header .nav {
+        display: block;
+    }
     
     /* Slider */
     .slider {
@@ -651,13 +657,13 @@ li.email a::before {
         height: auto;
     }
     .off-vertical{
-        top: 26vw;
+        top: 24vw;
         left: 15vw;
         width: 17.4vw;
         height: 31vw;
     }
     .off-horizontal{
-        top: 32.5vw;
+        top: 30.6vw;
         left: 47.9vw;
         width: 30.3vw;
         height: 17.2vw;

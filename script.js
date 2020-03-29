@@ -40,6 +40,7 @@ function onScroll(event){
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('li > a').forEach(el => { el.classList.remove('active') });
     event.target.classList.add('active');
+
 })
 
 
@@ -164,6 +165,7 @@ PHOTOS.addEventListener('click', (event) => {
     }
 })
 
+
 /* Contact */
 SUBMIT.addEventListener('click', (event) => {
      const subject = document.getElementById('subject').value.toString();
@@ -191,3 +193,37 @@ CLOSE_BUTTON.addEventListener('click', () => {
      document.getElementById('form').reset();
      document.getElementById('message-block').classList.add('hidden');
 });
+
+
+/* Menu for mobile devices */
+const SM_MENU = document.getElementById('header-menu');
+const NAV = document.querySelector('.header .nav');
+const BG_OPACITY = document.querySelector('.black-opacity');
+const LOGO = document.querySelector('.header-panel .logo');
+const HEADER_MENU = document.getElementById('header-menu');
+
+const getHiddenMenu = SM_MENU.addEventListener('click', () => {
+    if(HEADER_MENU.classList.contains('vertical-menu')){
+        LOGO.style.margin = '0 20vw';
+        NAV.style.display = 'none';
+        BG_OPACITY.style.display = 'none';
+        HEADER_MENU.classList.remove('vertical-menu');
+    }
+    else{
+        LOGO.style.margin = 0;
+        NAV.style.display = 'block';
+        BG_OPACITY.style.display = 'block';
+        HEADER_MENU.classList.add('vertical-menu');
+    }
+})
+
+const getPreviousForm = MENU.addEventListener('click', (event) => {
+    MENU.querySelectorAll('li > a').forEach(el => { el.classList.remove('active') });
+    event.target.classList.add('active');
+    if(HEADER_MENU.classList.contains('vertical-menu')){
+        BG_OPACITY.style.display = 'none';
+        NAV.style.display = 'none';
+        HEADER_MENU.classList.remove('vertical-menu');
+        LOGO.style.margin = '0 20vw';
+    }
+})

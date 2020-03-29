@@ -25,11 +25,12 @@
     list-style: none;
     font-family: Lato-Regular, sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #2d303a;
 }
-
 .wrapper {
     width: 1020px;
     margin: 0 auto;
@@ -38,7 +39,9 @@ body {
 .container {
     padding: 60px 40px;
 }
-
+.black-opacity {
+    display: none;
+}
 
 /*  PREVIEW */
 .preview {
@@ -62,6 +65,9 @@ body {
     justify-content: space-between;
     align-content: center;
     align-items: center;
+}
+.header-panel .header-menu {
+    display: none;
 }
 .header-panel .logo {
     padding-left: 38px;
@@ -582,8 +588,12 @@ li.email a::before {
 }
 
 
-@media only screen and (min-width: 1020px) {
+@media (min-width: 1020px) {
 
+    html {
+        max-width: 100%;
+        width: 100%;
+    }
     /* Header */
     .preview {
         display: block;
@@ -597,9 +607,17 @@ li.email a::before {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1019px) {
+
+@media (max-width: 1019px) {
 
     /* Main elements */
+    html{
+        overflow: scroll;
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
     .wrapper {
         display: inline;
         margin: 0;
@@ -619,6 +637,10 @@ li.email a::before {
     .slider {
         overflow: hidden;
         width: 100vw;
+        height: 58.4vw;
+    }
+    .slider-panel {
+        height: 440px;
     }
     .phone-vertical img {
         width: 22vw;
@@ -629,37 +651,40 @@ li.email a::before {
         height: auto;
     }
     .off-vertical{
-        top: 22vh;
+        top: 26vw;
         left: 15vw;
         width: 17.4vw;
-        height: 19.9vh;
+        height: 31vw;
     }
     .off-horizontal{
-        top: 26.25vh;
+        top: 32.5vw;
         left: 47.9vw;
         width: 30.3vw;
-        height: 11vh;
+        height: 17.2vw;
     }
 
-    /* Our services */
+    /* Our Services */
     .our-services {
         width: 100vw;
-        height: 650px;
+        height: 675px;
         overflow: hidden;
     }
     .services-panel {
-        width: 100%;
+        width: 100vw;
+        position: relative;
+        top: 10vw;
     }
     .services-panel > p {
-        width: 89vw;
+        overflow: hidden;
+        width: 88vw;
     }
     .article {
-        width: 100vw;
+        width: 93vw;
         justify-content: space-between;
         flex-basis: 100%;
     }
     .services-panel > .article > .section {
-        margin-bottom: 4vh;
+        margin-bottom: 6vw;
         flex: 1 0 50%
     }
 
@@ -671,6 +696,7 @@ li.email a::before {
     }
     .portfolio p {
         width: 83vw;
+        line-height: 1.6;
     }
     .photos {
         width: 94vw;
@@ -695,7 +721,8 @@ li.email a::before {
         width: 65vw;
     }
     .authors .person > img {
-        width: 30vw;
+        width: 28vw;
+        height: 28vw;
         height: auto;
     }
     .authors .person > p {
@@ -744,5 +771,225 @@ li.email a::before {
     .footer {
         width: 100vw;
         overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Main elements */
+    html{
+        overflow: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+    .wrapper {
+        display: inline;
+        margin: 0;
+    }
+    .preview {
+        height: 65px;
+    }
+    .black-opacity {
+        display: none;
+        height: 100%;
+        width: 100%;  
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        background-color: #000; 
+        opacity: 0.50; 
+        z-index: 100;
+    }
+
+    /* Header */
+    .header {
+        height: 65px;
+    }
+    .header .nav {
+        display: none;
+    }
+    .header-panel {
+        justify-content: left;
+        align-items: center;
+    }
+    .header .nav {
+        width: 70vw;
+        height: 500vw;
+        position: absolute;
+        top: 0;
+        background-color: #2d303a;
+    }
+    .header .nav ul {
+        display: flex;
+        position: relative;
+        top: 60vw;
+        left: 19vw;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .header .nav ul li {
+        width: 10vw;
+        margin-bottom: 8vw;
+    }
+    .header .nav ul li a {
+        font-size: 16px;
+    }
+    .header .nav ul li a:hover{
+        color: #f06c64;
+    }
+    .header-panel .logo {
+        margin: 0 20vw;
+        z-index: 2;
+    }
+    .header-panel .logo h1 {
+        font-size: 16px;
+    }
+    .header-panel .header-menu {
+        display: block;
+        margin-left: 5vw;
+        z-index: 2;
+    }
+    .header-panel .header-menu img {
+        transform: rotate(90deg);
+    }
+    .vertical-menu {
+        transform: rotate(90deg);
+    }
+
+    /* Slider */
+    .slider {
+        height: auto;
+    }
+    .slider .slider-panel {
+        height: auto;
+        margin-top: 40px;
+        position: relative;
+        right: 10px;
+    }
+    .slider .btn-left {
+        position: relative;
+        right: 20px;
+    }
+    .slider .btn-right {
+        position: relative;
+        left: 10px;
+    }
+    .phone {
+        margin: 0 10px;
+    }
+    .off-vertical{
+        top: 5.9vw;
+        left: 19.3vw;
+        width: 17.7vw;
+        height: 31.7vw;
+    }
+    .off-horizontal{
+        top: 12.5vw;
+        left: 51.3vw;
+        width: 30.5vw;
+        height: 17.2vw;
+    }
+
+    /*Our Services*/
+    .our-services {
+        height: 1060px;
+    }
+    .our-services .services-panel > p {
+        width: 80vw;
+    }
+    .services-panel > .article > .section {
+        margin-bottom: 4vh;
+        flex: 1 0 100%;
+    }
+
+    /* Portfolio */
+    .portfolio {
+        height: 880px;
+    }
+    .portfolio p {
+        width: 80vw;
+    }
+    .portfolio .container {
+        position: relative;
+    }
+    .photos {
+        height: 600px;
+        position: absolute;
+        overflow: hidden;
+        left: 9vw;
+    }
+    .photos img {
+        width: 38vw;
+        height: 38vw;
+        margin: 2vw;
+    }
+
+    /* About us*/
+    .about .container > p {
+        width: 77vw;
+    }
+    .authors {
+        width: 30vw;
+        flex-wrap: wrap;
+    }
+    .authors .person > img {
+        width: 77vw;
+        height: auto;
+    }
+    .authors .person > p {
+        width: 77vw;
+        overflow: visible;
+    }
+    .authors .person {
+        margin: 0;
+    }
+    .authors .person .sites{
+        margin: 0;
+        margin-bottom: 13vw;
+    }
+    .authors .person  .last-sites {
+        margin: 0;
+    }
+
+    /* Contact */
+    .contact {
+        height: 1080px;
+        position: relative;
+    }
+    .contact p {
+        width: 77vw;
+    }
+    .contact-with-us {
+        position: relative;
+        top: 150px;
+        flex-wrap: wrap;
+    }
+    .contact input {
+        width: 77vw;
+    }
+    .contact textarea {
+        width: 77vw;
+    }
+    .contact input[type="submit"] {
+        width: 77vw;
+    }
+    .contact .contact-info {
+        width: 77vw;
+        position: relative;
+        top: 22vw;
+        right: 4vw;
+    }
+    .contact .contact-info p {
+        width: 77vw;
+    }
+
+    /* Footer */
+    .footer p {
+        display: none;
+    }
+    .footer .footer-block {
+        justify-content: center;
+        padding-left: 15vw;
     }
 }
